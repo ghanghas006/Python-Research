@@ -10,5 +10,5 @@ def concert_booking(id_counter):
 
     return id_counter, ticket_id, id_number, fan_id, fan_name, tour_city
 
-concert_booking()
+concert_booking(id_counter)
 
