@@ -1,4 +1,5 @@
 class Product():
+    #constructor
     def __init__(self, name, quantity):
         self.name = name
         self.quantity = quantity
@@ -8,6 +9,7 @@ class Product():
         print("===========Welcome to Sebong Cafe!===============")
         print("Product Nmae:", self.name, "\nPrice: ", self.price, "\nQuantity: ", self.quantity)
 
+    #getter and setter method
     def get_price(self, sum):
         self.price += sum
 
