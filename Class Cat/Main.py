@@ -1,3 +1,4 @@
+#import method (from the class importing the data into main)
 from Cat import Cat, DomesticCat, WildCat
 
 if __name__ == "__main__":
@@ -8,7 +9,7 @@ if __name__ == "__main__":
 cat1.isHappy = False
 cat1.display()
 
-domesticCat = DomesticCat("Roshi", "Dino", 2, False)
+domesticCat = DomesticCat("May", "Dino", 2, False)
 domesticCat.display()
 domesticCat.sound()
 
