@@ -1,4 +1,5 @@
 class Member:
+    #constructor
     def __init__(self):
         self.total_members = 0
         self.diploma_count = 0
@@ -55,6 +56,7 @@ class Member:
                 elif member["programme"].lower() == "bachelor":
                     self.bachelor_count -=1
 
+                #f-string is used
                 print(f"Membership ID: {membership_id} has been withdrawn.")
                 return
         print("Member not found or incorrect details provided.")
@@ -65,12 +67,14 @@ class Member:
         """
         print("\nRegistered Members:")
         for member in self.member_list:
+            #f-string is used
             print(f"Membership ID: {member['membership_id']}")
             print(f"Stident ID: {member['student_id']}")
             print(f"Last Name: {member['last_name']}")
             print(f"Programme: {member['programme']}\n")
 
         print("Statistics:")
+        #f-string is used
         print(f"Total Registered Members: {self.total_members}")
         print(f"Diploma Students: {self.diploma_count}")
         print(f"Bachelor Students: {self.bachelor_count}")
@@ -85,6 +89,7 @@ class Member:
 
         for member in self.member_list:
             if member["membership_id"] == membership_id:
+                #f-string is used
                 print(f"Membership ID: {member['membership_id']}")
                 print(f"Stident ID: {member['student_id']}")
                 print(f"Last Name: {member['last_name']}")
@@ -105,6 +110,7 @@ class Member:
             print("3. Display all members and statistics.")
             print("4. Show specific Member Details.")
             print("0. Quit.")
+            #input method is used
             choice = input("Enter your choice(0-4):")
 
             if choice == "1":
