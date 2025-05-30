@@ -3,7 +3,7 @@ Collecting the information about the staff members.
 Author: Roshi
 """
 
-# import the staff information
+# defining the function for staff information
 def staff_info(unique_id):
     requisition_id = unique_id 
     unique_id += 1
@@ -15,6 +15,7 @@ def staff_info(unique_id):
 
     # printing the all information of the staff
     print("\nPrinting Staff Information:")
+    # formating string
     print(f"Date: {date}")
     print(f"Staff ID: {staff_id}")
     print(f"Staff Name: {staff_name}")
