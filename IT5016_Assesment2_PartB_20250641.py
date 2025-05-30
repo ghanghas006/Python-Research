@@ -16,6 +16,7 @@ class RequisitionSystem:
     RESET = "\033[0m"
 
     # method or variables for the data
+    #contructor
     def __init__(self):
         self.total_requisition = 0
         self.approved_requisition = 0
@@ -26,12 +27,13 @@ class RequisitionSystem:
         self.staff_list = []
         self.status_list = []
 
-    #  method to input the data of the staff
+    #  method input the data of the staff
     def staff_info(self):
         print("\nEnter the Staff Information:")
         date = input("Enter the date:")
         staff_id = input("Enter the staff id:")
         staff_name = input("Enter your name: ")
+        #count method
         self.requisition_id += 1
         self.total_requisition += 1
 
@@ -44,6 +46,7 @@ class RequisitionSystem:
         self.staff_list.append(staff)
 
         # printing the staff information
+        #f-string
         print(f"\n{RequisitionSystem.GREEN}=================Staff Information:================={RequisitionSystem.RESET}")
         print(f"Date: {date}")
         print(f"Staff ID: {staff_id}")
@@ -56,6 +59,7 @@ class RequisitionSystem:
 
         print("List of Requisition Items:")
         while True:
+            #input method
             items = input("Enter the requisition items that you want (e.g., Tea) or 'done' to end:")
             if items.lower() == 'done':
                 break
@@ -73,14 +77,17 @@ class RequisitionSystem:
 
     # requisition approval for each requisition
     def requisition_approval(self):
+        #if and else statements
         if 0 < self.total_cost < 500:
             status = "Approved"
+            #count method
             self.approved_requisition += 1
             staff = self.staff_list[-1]
             ref_number = f"{staff['staff_id'][:3].upper()}" + str(self.requisition_id)[-3:]
 
         else:
             status = "Pending"
+            #count method
             self.pending_requisition += 1
             ref_number = "Not Available"
 
@@ -102,6 +109,7 @@ class RequisitionSystem:
         for status in self.status_list:
             if status['requisition_id'] == requisition_update and status["availability_status"] == "Pending":
                 if new_availability_status.lower() == "approved":
+                    #count method
                     self.approved_requisition += 1
                     self.pending_requisition -= 1
                     status["availability_status"] = "Approved"
@@ -110,6 +118,7 @@ class RequisitionSystem:
                             status["ref_number"] = f"{staff['staff_id'][:3].upper()}" + str(staff['requisition_id'])[-3:].upper()
 
                 elif new_availability_status.lower() == "not approved":
+                    #count method
                     self.not_approved_requisition += 1
                     self.pending_requisition -= 1
                     status["availability_status"] = "Not Approved"
@@ -122,6 +131,8 @@ class RequisitionSystem:
 
     # printing the all requisition details 
     def display_requisition(self):
+        #f-string
+        #if and else statements
         print(f"\n{RequisitionSystem.BLUE}===================Display the Requisition:==================={RequisitionSystem.RESET}")
         for staff in self.staff_list:
             print(f"Staff ID: {staff['staff_id']}")
@@ -150,6 +161,7 @@ class RequisitionSystem:
     def main_menu(self):
         while True:
             # choice for the requisition display
+            #f-string
             print(f"\n{RequisitionSystem.RED}=============Requisition Details============={RequisitionSystem.RESET}")
             print("1. Staff Information.")
             print("2. Requisition Details.")
