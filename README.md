@@ -4,7 +4,6 @@ It conatins all the information about the files that are in this repositry.
 [Book](https://github.com/ghanghas006/Python-Research/tree/main/Booking.py)
 
 ## Table of Contents
-```
     [Book](https://github.com/ghanghas006/Python-Research/tree/main/Booking.py)
     Class Cat
     Class Pet
@@ -13,7 +12,7 @@ It conatins all the information about the files that are in this repositry.
     Members.py
     Product.py
     librarySystem.py
-```
+
 ### Booking.py
 When you run this code, it will create a booking ticket for the band tour, and it will ask about some of your information and then it provides you a concert booking receipt. In this example, it will show ticket id, your (fan) name, id number and the city for the tour.
 
