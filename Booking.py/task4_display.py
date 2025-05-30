@@ -3,6 +3,7 @@ from task1_booking import concert_booking
 from task2_addons import select_tickets_and_addons
 from task3_approval import approve_booking
 
+#defining the function
 def display_concert_booking():
     id_counter = 5000
 
@@ -12,7 +13,9 @@ def display_concert_booking():
     status, ref_number = approve_booking(total_cost, ticket_id,id_number)
 
     #printing concert 
+    
     print("\n YOUR CONCERT BOOKING RECEIPT")
+    #formatting string is used here
     print(f"Ticket ID: {ticket_id}")
     print(f"Name: {fan_name}")
     print(f"ID Type: {fan_id}")
