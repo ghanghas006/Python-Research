@@ -19,7 +19,7 @@ class Pet():
         print("Age: ", self.age)
         print("Species: ", self.species)
 
-# Child Class
+# Child Classes
 class Cow(Pet):
     def sound(self):
         print("Moo!")
