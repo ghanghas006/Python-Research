@@ -1,3 +1,4 @@
+#defining the fuction
 def select_tickets_and_addons():
     options = []
     total_cost = 0
@@ -5,6 +6,7 @@ def select_tickets_and_addons():
     #asking about the ticket type 
     print("\nTICKET TYPES & ADD_ONS")
     while True:
+        #input method
         name = input("Enter ticket type/add-on (e.g., VIP, Standard, Lightstick, Album) or 'done' to finish: ")
         if name.lower() == 'done':
             break
