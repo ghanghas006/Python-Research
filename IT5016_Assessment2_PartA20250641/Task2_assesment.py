@@ -6,7 +6,7 @@ Author: Roshi
 # import staff info from Task1
 from Task1_assesment import staff_info
 
-# import function for the requisition total
+# defining function for the requisition total
 def requisition_total():
     options = []
     total_cost = 0
@@ -14,6 +14,7 @@ def requisition_total():
     # printing the requisition items
     print("\n Requestition Items")
     while True:
+        #input method is usef
         items = input("Enter the requisition items that you want (e.g., Tea) or 'done' to finish: ")
         if items.lower() == 'done':
             break
