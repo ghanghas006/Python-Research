@@ -1,6 +1,6 @@
-
+#parent class
 class Book:
-    
+    #colors for designing
     RED = "\033[31m"
     BLUE = "\033[34m"
     GREEN = "\033[32m"
@@ -11,12 +11,13 @@ class Book:
     LIGHTRED = "\033[91m"
     RESET = "\033[0m"
 
+    #constructor
     def __init__(self, title, author, publication_year, availability_status = True):
         self.title = title
         self.author = author
         self.publication_year = publication_year
         self.availability_status = availability_status
-
+    #defining the function
     def display_details(self):
         status = f"{Book.GREEN}Available{Book.RESET}" if self.availability_status else f"{Book.LIGHTCYAN}Checked Out{Book.RESET}"
         return (f"Title: {self.title}\n"
@@ -26,8 +27,9 @@ class Book:
     
 
 
-
+#child classes
 class Patron:
+    #constructor
     def __init__(self, name, patron_id):
         self.name = name
         self.patron_id = patron_id
@@ -51,6 +53,7 @@ class Patron:
         
 
 class Library:
+    #constructor
     def __init__(self):
         self.books = []
         self.patrons = []
@@ -81,6 +84,7 @@ if __name__ == "__main__":
     library = Library()
 
     while True:
+        #f-string is used
         print(f"{Book.BGYELLOW}============Library Management System============{Book.RESET}")
         print(f"1. To {Book.LIGHTCYAN}Add a Book{Book.RESET}, press {Book.BLUE} '1'{Book.RESET}")
         print(f"2. To {Book.LIGHTCYAN}Register a Parton{Book.RESET}, press {Book.BLUE} '2'{Book.RESET}")
@@ -89,6 +93,7 @@ if __name__ == "__main__":
         print(f"5. To {Book.LIGHTCYAN}Return a Book{Book.RESET}, press {Book.BLUE} '5'{Book.RESET}")
         print(f"6. To {Book.LIGHTCYAN}Exit{Book.RESET}, press {Book.BLUE} '0'{Book.RESET}")
 
+        #input method is used
         choice = input("Enter your choice: ")
 
         if choice == "1":
