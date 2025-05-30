@@ -8,7 +8,7 @@ from Task1_assesment import staff_info
 from Task2_assesment import requisition_total
 from Task3_assesment import requisition_approval
 
-# import display requisition function
+# defining function display requisition
 def display_requisitions():
     unique_id = 10000
     unique_id += 1
@@ -20,6 +20,7 @@ def display_requisitions():
 
 # printing all the information
     print("\n Printing Requisitions:")
+    #f-string is used
     print(f"Date: {date}")
     print(f"Requisition ID: {requisition_id}")
     print(f"Staff ID: {staff_id}")
