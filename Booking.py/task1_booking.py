@@ -1,4 +1,5 @@
 def concert_booking(id_counter):
+    #collecting the fans's information during the ticket booking for band tour
     print("BAND TOUR TICKET BOOKING")
     fan_id = input("Enter your form of ID (Passport or Driver's License'):" )
     id_number = input("Enter your ID number:")
